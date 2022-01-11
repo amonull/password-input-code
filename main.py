@@ -90,7 +90,7 @@ class app(encryption):
     def delete(self, *del_item): #ERRORS(FUTURE_WARNING)FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
         try:
             warnings.simplefilter(action='ignore', category=FutureWarning)
-            self.csv_df = self.csv_df.drop(self.csv_df.index[[*del_item]])#removing the second [] around index for *args does not fix the issue but creates more. it needs second [] to work properly
+            self.csv_df = self.csv_df.drop(self.csv_df.index[[*del_item]])
             print(f"{self.csv_df}\nHow The File Will Look After Deleting")
             if input("Are you sure you want to delete this data y/n: ").lower() == "y":
                 self.csv_df.to_csv(f'{self.file_path}', header=False, index=False)
