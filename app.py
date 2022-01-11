@@ -23,7 +23,7 @@ try:#this line of code will allow for the program to encrypt the code so that th
             del_list = list(input("Choose the index number of item you wish to delete: "))
             if ' ' in del_list:
                 del_list.remove(' ')
-            del_items = [int(i) for i in del_list]
+            del_items = [int(i) for i in del_list]# there may not be a need for this for loop as *args is used on main.py
             app.delete(del_items)
 
         elif operation == "e":
