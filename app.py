@@ -1,7 +1,6 @@
 import main
 from main import *
 import os 
-import importlib
 
 try:#this line of code will allow for the program to encrypt the code so that the code can be properly used. and it will make sure that it doesnt end without encrypting first since it is in a while loop.
     while True:
